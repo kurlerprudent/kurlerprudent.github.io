@@ -16,7 +16,11 @@ function App() {
       <Navbar/>
       <Stack direction="row" spacing={2} justifyContent="space-between" >
       <Sidebar/>
+      
       <Feeds/>
+      
+      
+      
       <Rightbar/>
       </Stack>
       

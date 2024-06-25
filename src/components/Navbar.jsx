@@ -1,7 +1,8 @@
 import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, Toolbar, Typography, styled } from '@mui/material'
 import React, { useState } from 'react'
-import {Api, EventAvailable, Mail,  NotificationsNone} from "@mui/icons-material"
-
+import {EventAvailable, Mail,  NotificationsNone} from "@mui/icons-material"
+import img1 from "../Images/cccLogo.png"
+import gal from "../Images/gal.jpg"
 
 const StyledToolbar = styled(Toolbar)({
   display:"flex",
@@ -32,21 +33,21 @@ const UserBox = styled(Box)({
 })
 
 
+
+
 const Navbar = () => {
   const [open, setOpen] = useState(false)
   return (
     <Box>
-      <AppBar sx={{position:"sticky"}}>
+      <AppBar sx={{position:"stick"}}>
         <StyledToolbar>
           <Box display="flex">
-          <Api/>
-          <Typography sx={{display:{xs:"none", sm:"block"}}} variant='h6'>
-          
-          Navbar
-          </Typography>
+          <img src={img1} width="60%"/>
           </Box>
 
-          <Search><InputBase placeholder='Search...'/></Search>
+          <Search sx={{marginRight:{
+            xs:"20px"
+          }}}><InputBase placeholder='Search...'/></Search>
           <Tray sx={{display:{xs:"none", sm:"flex"}}}>
             <Badge badgeContent={4} color='error'>
               <Mail/>
@@ -59,6 +60,7 @@ const Navbar = () => {
             </Badge>
           </Tray>
           <Avatar 
+          src={gal}
           onClick={e=>{setOpen(true)}}
            sx={{display:{xs:"none", sm:"flex"}}} />
           <UserBox
