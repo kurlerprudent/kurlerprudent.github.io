@@ -6,8 +6,8 @@ import {CalendarToday, Cast, DarkMode, Handshake, Home, Settings, VolunteerActiv
 
 const Sidebar = () => {
   return (
-    <Box flex={1} p={2} sx={{display:{xs:"none" , sm:"block"}}}>
-      <Box position="fixed">
+    <Box flex={1} p={2} sx={{display:{xs:"none" , sm:"block"},}}>
+      <Box position="fixed" marginTop={7}>
          <List>
           <ListItem disablePadding>
             <ListItemButton>

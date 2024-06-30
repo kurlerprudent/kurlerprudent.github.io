@@ -2,10 +2,9 @@ import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Checkbox
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ReplyIcon from '@mui/icons-material/Reply';
 import React from 'react'
-import she from "../Images/she.jpg"
 import { Favorite, FavoriteBorder } from '@mui/icons-material';
 
-export const Posts = () => {
+export const Posts = (props) => {
   return (
     <Card sx={{marginBottom:6, marginTop:10}}>
     <CardHeader
@@ -26,7 +25,7 @@ export const Posts = () => {
       component="img"
      
       height="20%"
-      src={she}
+      src={props.imgName}
       alt="Paella dish"
     />
 
