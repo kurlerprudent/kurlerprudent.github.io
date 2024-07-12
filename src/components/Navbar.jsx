@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import {EventAvailable, Mail,  NotificationsNone} from "@mui/icons-material"
 import img1 from "../Images/cccLogo.png"
 import gal from "../Images/gal.jpg"
+import { Link } from 'react-router-dom'
 
 const StyledToolbar = styled(Toolbar)({
   display:"flex",
@@ -90,7 +91,7 @@ const Navbar = () => {
           horizontal: 'right',
         }}
       >
-        <MenuItem >Profile</MenuItem>
+        <MenuItem ><Link to='/profile' style={{textDecoration:'none', color:'black'}}>Profile</Link> </MenuItem>
         <MenuItem >My account</MenuItem>
         <MenuItem>Logout</MenuItem>
       </Menu>
