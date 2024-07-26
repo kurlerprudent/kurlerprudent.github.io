@@ -5,6 +5,7 @@ import StaffDashBoard from './Pages/StaffDashboard'
 import MembershipDashboard from './Pages/MembershipDashboard'
 import NoPage from './Pages/NoPage';
 import ProfilePage from './Pages/ProfilePage';
+import CalendarPage from './Pages/CalendarPage';
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route index element={<MembershipDashboard/>}/>
         <Route path='/staff' element={<StaffDashBoard/>}/>
         <Route path='/profile' element={<ProfilePage/>}/>
+        <Route path='calendar' element={<CalendarPage/>}/>
         <Route path='*' element={<NoPage/>}/>
       </Routes>
       </BrowserRouter>

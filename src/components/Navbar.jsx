@@ -4,6 +4,7 @@ import {EventAvailable, Mail,  NotificationsNone} from "@mui/icons-material"
 import img1 from "../Images/cccLogo.png"
 import gal from "../Images/gal.jpg"
 import { Link } from 'react-router-dom'
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 const StyledToolbar = styled(Toolbar)({
   display:"flex",
@@ -21,7 +22,11 @@ const Search = styled("div")({
   backgroundColor:"white",
   width:"40%",
   borderRadius:10,
-  padding:"0 10px"
+  padding:"0 10px",
+  display:'flex',
+  flexDirection:'row',
+  justifyContent:'space-evenly',
+  alignItems:'center'
 })
 
 const UserBox = styled(Box)({
@@ -48,7 +53,13 @@ const Navbar = () => {
 
           <Search sx={{marginRight:{
             xs:"20px"
-          }}}><InputBase placeholder='Search...'/></Search>
+          }}}>
+
+            <InputBase placeholder='Search...' sx={{width:'100%'}}/>
+            <SearchOutlinedIcon color='secondary'/>
+            </Search>
+
+
           <Tray sx={{display:{xs:"none", sm:"flex"}}}>
             <Badge badgeContent={4} color='error'>
               <Mail/>

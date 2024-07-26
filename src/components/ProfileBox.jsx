@@ -5,6 +5,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import EmailIcon from '@mui/icons-material/Email';
 import EditIcon from '@mui/icons-material/Edit';
 import ProfileInfo from './ProfileInfo';
+import Notifications from './Notifications';
 
 const PrifileBox = ({name, position}) => {
 
@@ -99,11 +100,11 @@ const PrifileBox = ({name, position}) => {
       </Box>
       <Box sx={{borderLeft:0.5, borderColor:'white',height:'100%'}}>
         <Container>
-        <Typography variant='h6' fontSize={15} color='darkblue' textAlign='left'>New Messages</Typography>
-        <Box>
-            <Switch/>
-            <Typography>Lorem ipsum dolor sit amet.</Typography>
-          </Box>
+        <Typography variant='h6' fontSize={15} color='darkblue' textAlign='left'>New Notifications</Typography>
+          <Notifications/>
+          <Notifications/>
+          <Notifications/>
+          <Notifications/>
         </Container>
         </Box>
       </Box>

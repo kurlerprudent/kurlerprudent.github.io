@@ -1,7 +1,8 @@
 import { Avatar, Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from '@mui/material'
 import React from 'react'
 import {CalendarToday, Cast, DarkMode, Handshake, Home, Settings, VolunteerActivism} from "@mui/icons-material";
-
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import { Link } from 'react-router-dom';
 
 
 const Sidebar = () => {
@@ -50,29 +51,38 @@ const Sidebar = () => {
           </ListItem>
 
           <ListItem disablePadding>
+            
+            
             <ListItemButton>
               <ListItemIcon>
                 <Cast />
               </ListItemIcon>
               <ListItemText primary="Live Stream" />
             </ListItemButton>
+           
           </ListItem>
 
+          
+
+          <ListItem disablePadding>
+          <Link to='calendar' style={{textDecoration:'none', color:'black'}}>
+            <ListItemButton>
+              <ListItemIcon>
+                <CalendarMonthIcon/>
+              </ListItemIcon>
+              <ListItemText primary="Calendar" />
+            </ListItemButton>
+            </Link>
+          </ListItem>
+
+
+          
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 <Settings />
               </ListItemIcon>
               <ListItemText primary="Settings" />
-            </ListItemButton>
-          </ListItem>
-
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <Avatar sx={{width:30, height:30}}/>
-              </ListItemIcon>
-              <ListItemText primary="Profile" />
             </ListItemButton>
           </ListItem>
 
