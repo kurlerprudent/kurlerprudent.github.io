@@ -52,14 +52,14 @@ const Sidebar = () => {
 
           <ListItem disablePadding>
             
-            
+          <Link to='staff' style={{textDecoration:'none', color:'black'}}>
             <ListItemButton>
               <ListItemIcon>
                 <Cast />
               </ListItemIcon>
               <ListItemText primary="Live Stream" />
             </ListItemButton>
-           
+           </Link>
           </ListItem>
 
           
