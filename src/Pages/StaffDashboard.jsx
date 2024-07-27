@@ -2,7 +2,9 @@ import React from 'react'
 import StaffSideBar from '../components/StaffSideBar'
 import Navbar from '../components/Navbar'
 import Stats from '../components/Stats'
-import { Box } from '@mui/material'
+import Table from '../components/Table'
+
+
 
 const StaffDashboard = () => {
   return (
@@ -12,9 +14,9 @@ const StaffDashboard = () => {
     
     <Navbar/>
     <StaffSideBar/>
-  
-    <Stats/>
     
+    <Stats/>
+    <Table/>
   
     </>
   )

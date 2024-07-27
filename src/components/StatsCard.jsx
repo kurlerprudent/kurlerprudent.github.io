@@ -27,7 +27,7 @@ const Male = 256
 const Female = 564
 const TotalMembers = Male + Female
 
-const StatsCard = ({}) => {
+const StatsCard = () => {
   return (
     <Box sx={{display:'flex',flexDirection:'column',gap:3}}>
 
@@ -84,7 +84,7 @@ const StatsCard = ({}) => {
         <Typography variant='h4'sx={{fontSize:{md:20}}} color='white' fontFamily='sans-serif'>
             Visitors
         </Typography>
-        <Typography color='white' variant='h5'>{Tithe}</Typography>
+        <Typography color='white' variant='h5'>{Visitors}</Typography>
     </Box>
     
     <Box><CardGiftcardOutlinedIcon fontSize='large' color=''/></Box>
