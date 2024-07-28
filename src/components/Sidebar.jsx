@@ -1,4 +1,4 @@
-import { Avatar, Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from '@mui/material'
+import {  Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from '@mui/material'
 import React from 'react'
 import {CalendarToday, Cast, DarkMode, Handshake, Home, Settings, VolunteerActivism} from "@mui/icons-material";
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
@@ -6,28 +6,34 @@ import { Link } from 'react-router-dom';
 
 
 const Sidebar = () => {
+
+  
   return (
     <Box flex={1} p={2} sx={{display:{xs:"none" , sm:"block"},}}>
       <Box position="fixed" marginTop={7}>
          <List>
-          <ListItem disablePadding>
+          <ListItem disablePadding >
+            <Link to='/' style={{textDecoration:'none', color:'black'}}>
             <ListItemButton>
               <ListItemIcon>
                 <Home />
               </ListItemIcon>
               <ListItemText primary="Home" />
             </ListItemButton>
+            </Link>
             </ListItem>
             
 
             
             <ListItem disablePadding>
+              <Link to='/events' style={{textDecoration:'none', color:'black'}}>
             <ListItemButton>
               <ListItemIcon>
                 <CalendarToday />
               </ListItemIcon>
               <ListItemText primary="Events" />
             </ListItemButton>
+            </Link>
             </ListItem>
             
 
@@ -42,17 +48,19 @@ const Sidebar = () => {
           </ListItem>
 
           <ListItem disablePadding>
+          <Link to='/donations' style={{textDecoration:'none', color:'black'}}>
             <ListItemButton>
               <ListItemIcon>
                 <VolunteerActivism />
               </ListItemIcon>
               <ListItemText primary="Donation" />
             </ListItemButton>
+            </Link>
           </ListItem>
 
           <ListItem disablePadding>
             
-          <Link to='staff' style={{textDecoration:'none', color:'black'}}>
+          <Link to='/staff' style={{textDecoration:'none', color:'black'}}>
             <ListItemButton>
               <ListItemIcon>
                 <Cast />
@@ -65,7 +73,7 @@ const Sidebar = () => {
           
 
           <ListItem disablePadding>
-          <Link to='calendar' style={{textDecoration:'none', color:'black'}}>
+          <Link to='/calendar' style={{textDecoration:'none', color:'black'}}>
             <ListItemButton>
               <ListItemIcon>
                 <CalendarMonthIcon/>

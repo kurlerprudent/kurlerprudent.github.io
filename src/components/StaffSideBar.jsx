@@ -1,6 +1,7 @@
 import { Avatar, Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from '@mui/material'
 import React from 'react'
 import {CalendarToday, Cast, DarkMode, Handshake, Home, Settings, VolunteerActivism} from "@mui/icons-material";
+import { Link } from 'react-router-dom';
 
 const StaffSideBar = () => {
   return (
@@ -8,23 +9,27 @@ const StaffSideBar = () => {
     <Box position="fixed" marginTop={8}>
        <List>
         <ListItem disablePadding>
+          <Link to='/' style={{textDecoration:'none', color:'black'}}>
           <ListItemButton>
             <ListItemIcon>
               <Home />
             </ListItemIcon>
             <ListItemText primary="Home" />
           </ListItemButton>
+          </Link>
           </ListItem>
           
 
           
           <ListItem disablePadding>
+            <Link to='/events' style={{textDecoration:'none', color:'black'}}>
           <ListItemButton>
             <ListItemIcon>
               <CalendarToday />
             </ListItemIcon>
             <ListItemText primary="Events" />
           </ListItemButton>
+          </Link>
           </ListItem>
           
 
@@ -39,12 +44,14 @@ const StaffSideBar = () => {
         </ListItem>
 
         <ListItem disablePadding>
+        <Link to='/donations' style={{textDecoration:'none', color:'black'}}>
           <ListItemButton>
             <ListItemIcon>
               <VolunteerActivism />
             </ListItemIcon>
             <ListItemText primary="Donation" />
           </ListItemButton>
+          </Link>
         </ListItem>
 
         <ListItem disablePadding>
@@ -65,14 +72,6 @@ const StaffSideBar = () => {
           </ListItemButton>
         </ListItem>
 
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <Avatar sx={{width:30, height:30}}/>
-            </ListItemIcon>
-            <ListItemText primary="Profile" />
-          </ListItemButton>
-        </ListItem>
 
         <ListItem disablePadding>
           <ListItemButton>

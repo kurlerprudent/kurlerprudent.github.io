@@ -5,8 +5,8 @@ import CardGiftcardOutlinedIcon from '@mui/icons-material/CardGiftcardOutlined';
 import VolunteerActivismOutlinedIcon from '@mui/icons-material/VolunteerActivismOutlined';
 import SummarizeRoundedIcon from '@mui/icons-material/SummarizeRounded';
 import GroupsRoundedIcon from '@mui/icons-material/GroupsRounded';
-import MaleIcon from '@mui/icons-material/Male';
-import FemaleIcon from '@mui/icons-material/Female';
+import { PieChart } from '@mui/x-charts';
+
 
 
 
@@ -26,6 +26,15 @@ const Visitors = 29
 const Male = 256
 const Female = 564
 const TotalMembers = Male + Female
+
+const data = [
+    {
+        id:1, value: Male, label:'Male'
+    },
+    {
+        id:2, value: Female, label:'Female'
+    }
+]
 
 const StatsCard = () => {
   return (
@@ -79,7 +88,7 @@ const StatsCard = () => {
 
 <Box sx={{display:'flex',width:'100%', flexDirection:{xs:'column',md:'row'}, gap:5}}>
 
-<Box sx={{borderRadius:2,width:{xs:'35vh', md:400},height:{xs:150, md:150}, display:'flex', justifyContent:'space-between', alignItems:'center', paddingX:2, backgroundColor: token.color4}}>
+<Box sx={{borderRadius:2,width:{xs:'35vh', md:500},height:{xs:150, md:150}, display:'flex', justifyContent:'space-between', alignItems:'center', paddingX:2, backgroundColor: token.color4}}>
     <Box sx={{display:'flex', flexDirection:'column',gap:{md:2}}}>
         <Typography variant='h4'sx={{fontSize:{md:20}}} color='white' fontFamily='sans-serif'>
             Visitors
@@ -91,33 +100,7 @@ const StatsCard = () => {
 </Box>
 
 
-<Box sx={{borderRadius:2,width:{xs:'35vh', md:400},height:{xs:150, md:150}, display:'flex', justifyContent:'space-between', alignItems:'center', paddingX:2, backgroundColor: token.color5}}>
-    <Box sx={{display:'flex', flexDirection:'column',gap:{md:2}}}>
-        <Typography variant='h4'sx={{fontSize:{md:20}}} color='white' fontFamily='sans-serif'>
-            Female
-        </Typography>
-        <Typography color='white' variant='h5'>{Female}</Typography>
-    </Box>
-    
-    <Box><FemaleIcon fontSize='large' color='secondary'/></Box>
-</Box>
-
-
-<Box sx={{borderRadius:2,width:{xs:'35vh', md:400},height:{xs:150, md:150}, display:'flex', justifyContent:'space-between', alignItems:'center', paddingX:2, backgroundColor: token.color6}}>
-    <Box sx={{display:'flex', flexDirection:'column',gap:{md:2}}}>
-        <Typography variant='h4'sx={{fontSize:{md:20}}} color='white' fontFamily='sans-serif'>
-            Male
-        </Typography>
-        <Typography color='white' variant='h5'>{Male}</Typography>
-    </Box>
-    
-    <Box><MaleIcon fontSize='large' color='secondary'/></Box>
-</Box>
-
-
-
-</Box> 
-<Box sx={{borderRadius:2,width:{xs:'35vh', md:400},height:{xs:150, md:150}, display:'flex', justifyContent:'space-between', alignItems:'center', paddingX:2, backgroundColor: token.color7}}>
+<Box sx={{borderRadius:2,width:{xs:'35vh', md:500},height:{xs:150, md:150}, display:'flex', justifyContent:'space-between', alignItems:'center', paddingX:2, backgroundColor: token.color7}}>
     <Box sx={{display:'flex', flexDirection:'column',gap:{md:2}}}>
         <Typography variant='h4'sx={{fontSize:{md:20}}} color='white' fontFamily='sans-serif'>
             Total Members
@@ -126,6 +109,29 @@ const StatsCard = () => {
     </Box>
     
     <Box><GroupsRoundedIcon fontSize='large' color='Secondary'/></Box>
+</Box>
+
+
+
+
+</Box> 
+
+
+<Box sx={{width:{xs:'35vh', md:500},height:{xs:150, md:400}, display:'flex', justifyContent:'center', alignItems:'center', paddingX:2}}>
+    <PieChart
+      series={[
+        {
+             arcLabel: (item) => `${item.label} (${item.value})`,
+      arcLabelMinAngle: 45,
+          data,
+          highlightScope: { faded:'series', highlighted:'item' },
+          faded: { innerRadius: 30, additionalRadius: -30,  color: 'red' },
+        },
+      ]}
+      height={340} sx={{width:'100%', color:'white'}}
+    />
+    
+    
 </Box>
 
 </Box>

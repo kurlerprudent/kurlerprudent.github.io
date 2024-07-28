@@ -42,10 +42,14 @@ const UserBox = styled(Box)({
 
 
 const Navbar = () => {
+
+
+
+  
   const [open, setOpen] = useState(false)
   return (
     <Box>
-      <AppBar sx={{position:"stick"}}>
+      <AppBar position='fixed' sx={{backgroundColor:'#356742'}}>
         <StyledToolbar>
           <Box display="flex">
           <img src={img1} width="60%"/>
@@ -61,9 +65,6 @@ const Navbar = () => {
 
 
           <Tray sx={{display:{xs:"none", sm:"flex"}}}>
-            <Badge badgeContent={4} color='error'>
-              <Mail/>
-            </Badge>
             <Badge badgeContent={3} color='error'>
             <NotificationsNone/>
             </Badge>

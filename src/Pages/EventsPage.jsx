@@ -5,7 +5,8 @@ import Feeds from "../components/Feeds";
 import Rightbar from "../components/Rightbar";
 import Navbar from "../components/Navbar"
 
-const MembershipDashboard = () => {
+
+const EventsPage = () => {
   return (
     <Box>
       <Navbar/>
@@ -23,4 +24,4 @@ const MembershipDashboard = () => {
   )
 }
 
-export default MembershipDashboard
+export default EventsPage
