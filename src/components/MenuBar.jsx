@@ -32,7 +32,7 @@ const MenuBar = () => {
   return (
     <Box>
 
-        <AppBar>
+        <AppBar position='fixed' sx={{backgroundColor:'#356742'}}>
             <Toolbar sx={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
             <IconButton size='large' onClick={handleClick} sx={{width:'20%'}}>
             <MenuIcon/>
@@ -40,7 +40,7 @@ const MenuBar = () => {
             <Box width='30%' height='50%' marginRight={3}>
                 <img src={logo} alt="Church logo" width='100%' height={40} />
             </Box>
-            <Box >
+            <Box sx={{marginRight:2}}>
             <Badge badgeContent={4} color='error'>
                 
                     <CalendarMonth/>

@@ -2,7 +2,7 @@ import {  Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switc
 import React from 'react'
 import {CalendarToday, Cast, DarkMode, Handshake, Home, Settings, VolunteerActivism} from "@mui/icons-material";
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import { Link } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
 
 
 const Sidebar = () => {
@@ -13,27 +13,36 @@ const Sidebar = () => {
       <Box position="fixed" marginTop={7}>
          <List>
           <ListItem disablePadding >
-            <Link to='/dashboard' style={{textDecoration:'none', color:'black'}}>
+            <NavLink to='/dashboard' style={({isActive})=>({
+               textDecoration: 'none',
+               color: isActive ? 'white' : 'black',
+               backgroundColor: isActive ? 'blue' : 'transparent',
+               borderRadius:5 
+            })}>
             <ListItemButton>
               <ListItemIcon>
                 <Home />
               </ListItemIcon>
               <ListItemText primary="Home" />
             </ListItemButton>
-            </Link>
+            </NavLink>
             </ListItem>
             
 
             
             <ListItem disablePadding>
-              <Link to='/events' style={{textDecoration:'none', color:'black'}}>
+            <NavLink to='/events' style={({isActive})=>({
+               textDecoration: 'none',
+               color: isActive ? 'white' : 'black',
+               backgroundColor: isActive ? 'blue' : 'transparent'
+            })}>
             <ListItemButton>
               <ListItemIcon>
                 <CalendarToday />
               </ListItemIcon>
               <ListItemText primary="Events" />
             </ListItemButton>
-            </Link>
+            </NavLink>
             </ListItem>
             
 
@@ -48,39 +57,51 @@ const Sidebar = () => {
           </ListItem>
 
           <ListItem disablePadding>
-          <Link to='/donations' style={{textDecoration:'none', color:'black'}}>
+          <NavLink to='/donations' style={({isActive})=>({
+               textDecoration: 'none',
+               color: isActive ? 'white' : 'black',
+               backgroundColor: isActive ? 'blue' : 'transparent'
+            })}>
             <ListItemButton>
               <ListItemIcon>
                 <VolunteerActivism />
               </ListItemIcon>
               <ListItemText primary="Donation" />
             </ListItemButton>
-            </Link>
+            </NavLink>
           </ListItem>
 
           <ListItem disablePadding>
             
-          <Link to='/staff' style={{textDecoration:'none', color:'black'}}>
+          <NavLink to='/staff' style={({isActive})=>({
+               textDecoration: 'none',
+               color: isActive ? 'white' : 'black',
+               backgroundColor: isActive ? 'blue' : 'transparent'
+            })}>
             <ListItemButton>
               <ListItemIcon>
                 <Cast />
               </ListItemIcon>
               <ListItemText primary="Live Stream" />
             </ListItemButton>
-           </Link>
+           </NavLink>
           </ListItem>
 
           
 
           <ListItem disablePadding>
-          <Link to='/calendar' style={{textDecoration:'none', color:'black'}}>
+          <NavLink to='/calendar' style={({isActive})=>({
+               textDecoration: 'none',
+               color: isActive ? 'white' : 'black',
+               backgroundColor: isActive ? 'blue' : 'transparent'
+            })}>
             <ListItemButton>
               <ListItemIcon>
                 <CalendarMonthIcon/>
               </ListItemIcon>
               <ListItemText primary="Calendar" />
             </ListItemButton>
-            </Link>
+            </NavLink>
           </ListItem>
 
 
