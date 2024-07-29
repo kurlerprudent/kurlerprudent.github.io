@@ -4,9 +4,12 @@ import Sidebar from '../components/Sidebar';
 import DonationsContainer from '../components/DonationsContainer';
 import { Box } from '@mui/material';
 import PaymentType from '../components/PaymentType';
+import {useMediaQuery} from '@mui/material'
+import MenuBar from '../components/MenuBar';
+
 
 const DonationsPage = () => {
-
+  const xs = useMediaQuery('(max-width:430px)')
   const paymentTypeRef = useRef(null);
 
 
@@ -19,8 +22,7 @@ const DonationsPage = () => {
   return (
     <>
       <Box sx={{ width: '100%' }}>
-        <Navbar />
-        <Sidebar />
+        {xs? <MenuBar/> : <><Navbar/> <Sidebar/></>}
         
         <div onClick={scrollToPaymentType}>
           <DonationsContainer />

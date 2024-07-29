@@ -87,7 +87,7 @@ const Register = () => {
           />
         </div>
 
-        <Link to='/dashboad' style={{textDecoration:'none', color:'inherit'}}><button type="submit">Confirm Registration</button></Link>
+        <Link to='/dashboard' style={{textDecoration:'none', color:'inherit'}}><button type="submit">Confirm Registration</button></Link>
       </form>
     </div>
   );

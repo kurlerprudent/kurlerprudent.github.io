@@ -9,7 +9,7 @@ const StaffSideBar = () => {
     <Box position="fixed" marginTop={8}>
        <List>
         <ListItem disablePadding>
-          <Link to='/' style={{textDecoration:'none', color:'black'}}>
+          <Link to='/dashboard' style={{textDecoration:'none', color:'black'}}>
           <ListItemButton>
             <ListItemIcon>
               <Home />

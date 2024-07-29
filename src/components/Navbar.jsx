@@ -1,10 +1,11 @@
-import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, Toolbar, Typography, styled } from '@mui/material'
+import { AppBar, Avatar, Badge, Box, IconButton, InputBase, Menu, MenuItem, Toolbar, Typography, styled } from '@mui/material'
 import React, { useState } from 'react'
 import {EventAvailable, Mail,  NotificationsNone} from "@mui/icons-material"
 import img1 from "../Images/cccLogo.png"
 import gal from "../Images/gal.jpg"
 import { Link } from 'react-router-dom'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const StyledToolbar = styled(Toolbar)({
   display:"flex",
@@ -51,9 +52,15 @@ const Navbar = () => {
     <Box>
       <AppBar position='fixed' sx={{backgroundColor:'#356742'}}>
         <StyledToolbar>
-          <Box display="flex">
+          <Box sx={{display:{xs:'none', md:'flex'}}}>
           <img src={img1} width="60%"/>
           </Box>
+          <Box sx={{display:{xs:'flex',md:'none'}}}>
+            <IconButton sx={{color:'white'}}>
+                <MenuIcon/>
+            </IconButton>
+          </Box>
+          
 
           <Search sx={{marginRight:{
             xs:"20px"
@@ -105,7 +112,7 @@ const Navbar = () => {
       >
         <MenuItem ><Link to='/profile' style={{textDecoration:'none', color:'black'}}>Profile</Link> </MenuItem>
         <MenuItem >My account</MenuItem>
-        <MenuItem>Logout</MenuItem>
+        <Link to='/' style={{textDecoration:'none', color:'inherit'}}><MenuItem>Logout</MenuItem></Link>
       </Menu>
       </AppBar>
     </Box>

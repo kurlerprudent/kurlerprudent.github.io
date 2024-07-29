@@ -11,7 +11,7 @@ const Table = () => {
   const sortedData = Data.sort((a,b)=> a.id - b.id)
 
   return (
-    <Box sx={{width:{md:'70%',xs:'90%'} , marginLeft:{xs:3, md:25,lg:35},marginRight:{md:80,xs:12}, marginTop:10}}>
+    <Box sx={{width:{md:'70%',xs:'90%'} , marginLeft:{xs:3, md:25,lg:35},marginRight:{md:80,xs:12}, marginTop:10, marginBottom:40}}>
 
       <Typography variant='h4'color='primary'>
         Church Members

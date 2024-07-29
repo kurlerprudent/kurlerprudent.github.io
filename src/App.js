@@ -11,6 +11,7 @@ import Dashboard from './Pages/Dashboard';
 import Home from'./Home/Home'
 import Register from './Home/Register'
 import Login from './Home/Login'
+import { MobileMoneyPaymentPage } from './Pages/MobileMoneyPaymentPage';
 
 
 
@@ -23,14 +24,14 @@ function App() {
     <>
       <BrowserRouter>
       <Routes>
-        <Route  path='/dashboad' element={<Dashboard/>}/>
+        <Route  path='/dashboard' element={<Dashboard/>}/>
         <Route path='/events' element={<EventsPage/>}/>
         <Route path='/staff' element={<StaffDashBoard/>}/>
         <Route path='/profile' element={<ProfilePage/>}/>
         <Route path='/calendar' element={<CalendarPage/>}/>
         <Route path='/donations' element={<DonationsPage/>}/>
         <Route index element= {<Home/>}/>
-
+        <Route path='/mobilepayment' element={<MobileMoneyPaymentPage/>}/>
         <Route index element={<Home/>}/>
         <Route path='/Register' element={<Register/>}/>
         <Route path='/Log in' element={<Login/>}/>
