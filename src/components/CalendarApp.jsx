@@ -33,17 +33,17 @@ const CalendarApp = () => {
 
  
   return (
-    <Box sx={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'70%',marginLeft:'17%', marginTop:'5%'}}>
+    <Box sx={{height:400, display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'70%',marginLeft:'17%', marginTop:'5%', gap:5}}>
        <h2> My Calendar</h2>
-       <Box sx={{width:'100%'}}>
+       <Box sx={{height:'70%'}} >
 
       
        <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin]}
         initialView='dayGridMonth'
         headerToolbar={{
-            start:'today, prev, next',
-            center:'title',
+            start:'title',
+            center:'today, prev, next',
             end:'dayGridMonth, dayGridWeek, dayGridDay',
             eventBackgroundColor:'blue'
         }}

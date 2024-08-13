@@ -16,6 +16,9 @@ const EventsPage = () => {
       {xs? <MenuBar/> : <> <Navbar/> <Sidebar/></>}
       <Stack sx={{width:{md:'70%',xs:'100%'}, marginLeft:{lg:'15%',md:'17%',xs:0}}}>
       <Feeds/>
+      <Feeds/>
+      <Feeds/>
+      <Feeds/>
       <Rightbar/>
       </Stack>
       

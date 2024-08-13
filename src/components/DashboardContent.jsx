@@ -42,7 +42,7 @@ const DashboardContent = () => {
         <Box sx={{display:'flex', flexDirection:'column',gap:4}}>
             <StyledBox boxShadow={3}>
                 <Box>
-                <Typography variant='h5'>Upcoming Events</Typography>
+                <Typography variant='h5' textAlign='center'>Upcoming Events</Typography>
                 </Box>
                 
                 
@@ -62,7 +62,7 @@ const DashboardContent = () => {
 
 
             <StyledBox boxShadow={3} >
-                <Typography variant='h5'>Recent Activities</Typography>
+                <Typography variant='h5' textAlign='center'>Recent Activities</Typography>
                 
                 <Box>
                     <Typography >Attended Event1</Typography>
@@ -74,7 +74,7 @@ const DashboardContent = () => {
                 <Typography variant='h5'>Donations</Typography>
 
                 <Box sx={{display:'flex', flexDirection:'column',gap:2}}>
-                    <Link to='/donations' style={{textDecoration:'none', color:'inherit'}}><Button variant='contained' sx={{backgroundColor:green[400],width:'35%'}}>Make Donations</Button></Link>
+                    <Link to='/donations' style={{textDecoration:'none', color:'inherit'}}><Button variant='contained' sx={{backgroundColor:green[400],width:'35%'}} textAlign='center'>Make Donations</Button></Link>
                     <Typography variant='h6'>Donation History</Typography>
                     <Box>
                     <Typography>Payment made for GHS 100.00 to CCC. Reference: Tithe</Typography>
@@ -84,10 +84,9 @@ const DashboardContent = () => {
                     
                 </Box>
                 </StyledBox>
-
-
+                    
                 <StyledBox>
-
+                <Typography variant='h5'textAlign='center'>Community Groups</Typography>
                 </StyledBox>
         </Box>
 
