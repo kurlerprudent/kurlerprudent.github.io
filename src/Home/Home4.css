@@ -1,0 +1,58 @@
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2d4629;
+    color: #fff;
+    padding: 40px;
+  }
+  
+  .contact-image img {
+    width: 100%;
+    height: auto;
+    
+
+  }
+  
+  .contact-details {
+    max-width: 600px;
+    text-align: left;
+    margin-right: 150px;
+  }
+  
+  .contact-details h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #83b27c;
+    
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: left;
+  }
+  
+  .contact-info div {
+    margin-bottom: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #8caf6c;
+  }
+
+  .phone-email{
+   margin-left: 64px;
+   color: #e9f4d6;
+  }
